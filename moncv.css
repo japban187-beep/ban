@@ -1,0 +1,1252 @@
+* {
+	margin: 0px;
+}
+
+@font-face {
+	font-family: ecriture-p;
+	src: url(font/Overlock-Regular.ttf);
+}
+
+@font-face {
+	font-family: ecriture-h;
+	src: url(font/Overlock-Black.ttf);
+}
+
+@font-face {
+	font-family: diplome;
+	src: url(font/3Dumb.ttf);
+}
+
+
+/****propriété des couleurs du cv****/
+:root {
+	--color-body-bg: repeating-linear-gradient(#0609a186, #030230db, #040557);
+	--color-body: #000000db;
+	--color-doree: #eeda89f7;
+	--color-diplome: #ecf0e9;
+	--color-headerfooter: #257ecc;
+	;
+}
+
+body {
+	background-color: var(--color-body);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	min-height: 100vh;
+	overflow-x: hidden;
+
+}
+
+main {
+	margin: 1rem;
+	filter: grayscale(0.3);
+	filter: contrast(0.9);
+	justify-content: center;
+
+}
+
+/****propriété de la partie prénom et bienvenue****/
+#bienvenue {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	background-color: var(--color-headerfooter);
+	border-radius: 10px;
+	border: groove 10px black;
+	padding-bottom: 1rem;
+	color: white;
+
+}
+
+#bienvenue h1 {
+	text-align: center;
+	font-size: 25px;
+	margin-top: 1rem;
+	margin-bottom: 2rem;
+	font-family: ecriture-h;
+	border: inset 4px whitesmoke;
+	color: var(--color-doree);
+	margin-right: 10%;
+	margin-left: 10%;
+	width: 77%;
+	box-shadow: 10px 10px 10px black;
+	text-shadow: 10px 10px 10px black;
+}
+
+#bienvenue h2 {
+	font-family: ecriture-h;
+}
+
+
+#titre h2 {
+	display: flex;
+	text-align: center;
+	font-size: 10px;
+
+}
+
+h2 {
+	color: white;
+	font-size: 19px;
+	text-align: center;
+	font-family: diplome;
+	margin-bottom: 2rem;
+}
+
+h3 {
+	text-align: center;
+	font-size: 25px;
+	margin-bottom: 2rem;
+	margin-top: 1rem;
+	color: white;
+}
+
+h5 {
+
+	font-size: 20px;
+	font-family: ecriture-h;
+	padding-bottom: 15px;
+	text-align: center;
+	color: black;
+}
+
+p {
+	padding-bottom: 15px;
+	font-family: ecriture-p;
+	font-weight: bold;
+	padding-bottom: 15px;
+	text-align: center;
+}
+
+/**************************************************************/
+
+/****propriété de la partie diplomes avec les hovers****/
+
+.diplomes {
+	display: flex;
+	margin-top: 1rem;
+	border: groove 10px black;
+	flex-direction: column;
+	padding-top: 1rem;
+	background-image: var(--color-body-bg);
+	font-family: diplome;
+	color: white;
+	max-width: 100%;
+
+
+
+}
+
+.diplomes h2 {
+	font-size: 2rem;
+	margin-bottom: 2rem;
+	text-align: center;
+	padding-bottom: 2rem;
+	color: white;
+
+
+}
+
+.diplomes p {
+	font-size: 15px;
+	padding-bottom: 2rem;
+	text-align: center;
+	font-family: ecriture-p;
+
+}
+
+.diplomes button {
+	padding-bottom: 0px;
+	font-family: diplome;
+	font-size: 16px;
+	color: #090909;
+	margin-bottom: 2rem;
+	margin-left: auto;
+	margin-right: auto;
+	border: outset 5px black;
+	font-weight: bold;
+	cursor: pointer;
+	background-color: var(--color-diplome);
+
+}
+
+.diplomes button:hover {
+	transform: translateY(-10px);
+	transition: transform 0.3s ease-in-out;
+}
+
+#cadremeca,
+#resumerinform,
+#cadresoudure {
+	border: solid 2px;
+	margin: 1rem;
+	box-shadow: 3px 19px 18px;
+	padding: 15px;
+}
+
+/**************************/
+/*priorité de la partie dev*/
+
+nav {
+	display: none;
+	animation-name: zoomInUp;
+	animation-duration: 1s;
+	animation-fill-mode: both;
+	border-radius: 10px;
+}
+
+nav.visible,
+#divsoudure.visible,
+#divmeca.visible,
+#divavion.visible {
+	display: block;
+	background-color: #f6f6f4;
+	color: black;
+
+
+}
+
+#html,
+#js,
+#css,
+#siteweb {
+	display: flex;
+	flex-direction: column;
+
+
+}
+
+#html img,
+#css img,
+#siteweb img {
+	width: 200px;
+	height: 200px;
+	box-shadow: -9px 19px 16px black;
+	margin-left: 40px;
+	border-radius: 10px;
+
+}
+
+#js img {
+	display: flex;
+	justify-content: center;
+	margin-left: 12%;
+	width: 235px;
+	height: 200px;
+	box-shadow: 10px 10px 10px black;
+
+}
+
+
+nav h5 {
+	text-align: center;
+	margin-bottom: 10px;
+	margin-top: 1rem;
+	font-size: 18px;
+}
+
+nav p {
+	text-align: center;
+	padding-top: 40px;
+	font-size: 23px;
+	font-family: ecriture-p;
+}
+
+#close-dev:hover,
+#close-soudure:hover,
+#close-meca:hover,
+#close-avion:hover {
+	background-color: var(--color-doree);
+
+}
+
+/*******************************/
+/* priorité de la partie soudure*/
+
+#divsoudure {
+	display: none;
+	margin: 10px;
+	margin-bottom: 20px;
+	animation-duration: 1s;
+	animation-name: fadeInDownBig;
+}
+
+#souduretig {
+	display: flex;
+	flex-direction: column;
+}
+
+#souduretig img {
+	width: 200px;
+	height: 200px;
+	box-shadow: -9px 19px 16px black;
+	margin-left: 12%;
+	margin-bottom: 2rem;
+
+}
+
+#divsoudure h5,
+#divmeca h5,
+#divavion h5 {
+	text-align: center;
+	margin-bottom: 10px;
+	margin-top: 15px;
+	font-size: 18px;
+}
+
+#divsoudure p,
+#divmeca p,
+#divavion p {
+	text-align: center;
+	cursor: pointer;
+	padding-top: 20px;
+	font-size: 15px;
+	font-family: ecriture-p;
+
+}
+
+/*********************************/
+/*priorité de la partie mecanique*/
+
+#divmeca {
+	display: none;
+	margin: 30px;
+	margin-bottom: 50px;
+	animation-timing-function: ease-out;
+	animation-duration: 1s;
+	animation-name: slideInRight;
+
+}
+
+/*******************************************/
+/*priorité de la partie faisceaux electrique*/
+
+#divavion {
+	display: none;
+	margin: 30px;
+	margin-bottom: 50px;
+	animation-name: flipInX;
+	backface-visibility: visible !important;
+	animation-duration: 1.5s;
+	animation-fill-mode: both;
+
+}
+
+/****FERMER******/
+
+#close {
+	padding: 10px;
+}
+
+.autretaf {
+	display: flex;
+	text-align: center;
+	flex-direction: column;
+	font-size: 16px;
+	margin-top: 12px;
+	border: groove 10px black;
+	padding-top: 25px;
+	padding-bottom: 14px;
+	background-image: var(--color-body-bg);
+	margin-bottom: 1rem;
+	font-family: ecriture-p;
+	max-width: 100%;
+
+}
+
+.autretaf p {
+	color: white;
+}
+
+.cadretaf {
+	border: inset 5px var(--color-doree);
+	padding-bottom: 2rem;
+
+}
+
+#text {
+	color: white;
+}
+
+h6 {
+	font-size: 18px;
+}
+
+#vente,
+#agro,
+#sport {
+	margin-bottom: 15px;
+	margin-top: 30px;
+	cursor: pointer;
+	color: white;
+	font-family: ecriture-h;
+}
+
+#vente:hover,
+#agro:hover,
+#sport:hover {
+
+	text-shadow: 10px 10px 10px black;
+	text-shadow: 0px 15px 4px black;
+
+}
+
+#infovente,
+#infoagro,
+#infosport {
+	display: none;
+	margin: 30px;
+	margin-bottom: 50px;
+}
+
+#infovente.visible,
+#infoagro.visible,
+#infosport.visible {
+	display: block;
+	padding-bottom: 5px;
+	padding: 10px;
+	border-radius: 10px;
+	animation-name: bounceInRight;
+	animation-duration: 2.5s;
+	animation-fill-mode: both;
+	background-color: cadetblue;
+
+}
+
+#close-vente.hidden,
+#close-agro.hidden,
+#close-sport.hidden {
+	display: none;
+}
+
+
+#close-vente,
+#close-agro,
+#close-sport {
+	display: block;
+	flex-direction: column;
+	padding: 5px;
+	margin-left: auto;
+	margin-right: auto;
+
+
+}
+
+#close-vente:hover,
+#close-agro:hover,
+#close-sport:hover {
+	background-color: var(--color-doree);
+	transform: translateY(-10px);
+	transition: transform 0.3s ease-in-out;
+	box-shadow: 0px 16px 11px black;
+	border-radius: 40px;
+	z-index: 10;
+}
+
+#hobbies {
+	justify-content: center;
+	background-image: var(--color-body-bg);
+	border: groove 10px black;
+	padding: 22px;
+	font-family: ecriture-h;
+	color: white;
+
+}
+
+br {
+	padding-left: 8px;
+	padding-right: 8px;
+	padding-top: 0px;
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+
+footer {
+	display: flex;
+	background-color: var(--color-headerfooter);
+	color: white;
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	border: groove 10px black;
+
+
+}
+
+footer h4 {
+	font-size: 14px;
+	text-align: center;
+	font-family: ecriture-h;
+	font-style: italic;
+}
+
+/**format tablette**/
+
+@media screen and (min-width: 768px) {
+
+	#bienvenue h1 {
+		font-size: 35px;
+	}
+
+	#bienvenue h2 {
+		font-size: 25px;
+
+	}
+
+	p {
+		font-weight: bold;
+	}
+
+	.diplomes button {
+		font-size: 25px;
+	}
+
+	#html img:hover,
+	#css img:hover,
+	#siteweb img:hover,
+	#js img:hover {
+		transform: scale(1.5);
+		justify-content: center;
+		cursor: pointer;
+
+	}
+
+	#html img,
+	#css img,
+	#siteweb img,
+	#js img {
+		width: 350px;
+		height: 380px;
+		margin-right: 40px;
+		box-shadow: -9px 19px 16px black;
+		transition: transform 0.3s ease-in-out;
+		border-radius: 10px;
+		justify-content: center;
+		margin-left: 28%;
+
+	}
+
+	#siteweb img {
+		width: 300px;
+		height: 750px;
+		margin-left: 35%;
+	}
+
+	#souduretig img {
+		margin-left: 35%;
+		transform: all 0.8s ease;
+	}
+
+	#souduretig img:hover {
+		transform: scale(1.5);
+		justify-content: center;
+		cursor: pointer;
+		transform: all 0.8s ease;
+	}
+
+	footer {
+
+		text-align: center;
+		justify-content: center;
+		margin-bottom: 2rem;
+		width: 90%;
+	}
+
+	footer h4 {
+		font-size: 20px;
+		color: white;
+	}
+
+	/****propriété des colonne animé en hover de différentes couleurs dans autres tafs****/
+	.container {
+		width: 100%;
+		display: flex;
+		justify-content: space-between;
+
+	}
+
+	.container .card {
+		position: relative;
+		width: autopx;
+		padding: 16px;
+		box-shadow: 0 10px 30px rgba(0, 0, 0, .1);
+		overflow: hidden;
+	}
+
+	.container .card:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: calc(-100% + 4px);
+		width: 100%;
+		height: 100%;
+		z-index: 1;
+		transition: 0.5s ease-in-out;
+	}
+
+	.container .card:hover:before {
+		bottom: 0;
+	}
+
+	.container .card div {
+		position: relative;
+		z-index: 2;
+	}
+
+	.container .card h2 {
+		margin-bottom: 10px;
+		font-size: 20px;
+		transition: 0.5s;
+		color: #777;
+	}
+
+	.container .card p {
+		font-size: 16px;
+		transition: 0.5s;
+		color: #777;
+	}
+
+	.container .card a {
+		margin-top: 20px;
+		font-size: 14px;
+		display: inline-block;
+		text-decoration: none;
+		transition: 0.5s;
+		background: #fff;
+		color: #777;
+		padding: 6px 10px;
+		box-shadow: 0 2px 20px rgba(0, 0, 0, .05);
+		font-weight: 600;
+	}
+
+	.container .card:hover h2,
+	.container .card:hover p {
+		color: #fff;
+	}
+
+	/**************************************************************/
+
+}
+
+/****PASSAGE EN 1024*******/
+
+@media screen and (min-width: 1024px) {
+
+	main {
+		width: auto;
+	}
+
+	#bienvenue,
+	.diplomes,
+	.autretaf,
+	footer,
+	#hobbies {
+		margin: auto;
+		margin-bottom: 2rem;
+	}
+
+	img {
+		display: flex;
+		width: 410px;
+		height: 495px;
+		padding-top: 30px;
+		justify-content: center;
+
+	}
+
+	#bienvenue h1 {
+
+		flex-direction: column;
+		margin-bottom: 1rem;
+		margin-top: 1rem;
+		font-size: 40px;
+		font-family: ecriture-h;
+
+	}
+
+	#titre h2,
+	h2 {
+		display: flex;
+		justify-content: center;
+		font-size: 30px;
+
+	}
+
+
+	h3 {
+		text-align: center;
+		font-size: 45px;
+		margin-bottom: 2rem;
+		margin-top: 1rem;
+		color: white;
+	}
+
+	h5 {
+		padding-bottom: 20px;
+		font-size: 30px;
+		font-family: ecriture-h;
+		color: black;
+	}
+
+	h6 {
+		font-size: 24px;
+	}
+
+	p {
+		padding-bottom: 8px;
+		font-family: ecriture-p;
+		font-weight: bolder;
+		font-size: 25px;
+	}
+
+	#hobbies {
+		background-image: var(--color-body-bg);
+		border: groove 10px black;
+		padding: 20px;
+		border-radius: 10px;
+	}
+
+	/**************************************************************/
+
+
+	.diplomes {
+		display: flex;
+		border: groove 10px black;
+		flex-direction: column;
+		font-family: diplome;
+		color: white;
+		border-radius: 10px;
+	}
+
+	.diplomes h2 {
+		font-size: 40px;
+		margin-bottom: 0rem;
+		text-align: center;
+		padding-bottom: 2rem;
+		text-shadow: 10px 10px 10px black;
+
+	}
+
+	.diplomes p {
+		font-size: 20px;
+		padding-bottom: 1rem;
+		margin-bottom: 1rem;
+		text-align: center;
+		font-family: ecriture-p;
+
+	}
+
+	.diplomes button {
+		padding-bottom: 2px;
+		font-family: diplome;
+		font-size: 2rem;
+		margin-bottom: 3rem;
+		margin-left: auto;
+		margin-right: auto;
+		border: outset 5px black;
+		font-weight: bold;
+		background-color: var(--color-diplome);
+		box-shadow: 6px 23px 12px black;
+		cursor: pointer;
+		border-radius: 10px;
+
+	}
+
+	.diplomes button:hover {
+		transform: translateY(-10px);
+		transition: transform 0.3s ease-in-out;
+		color: #0867fd96;
+		text-shadow: 5px 17px 10px black;
+
+	}
+
+	/**************************/
+	/*priorité de la partie dev*/
+
+	nav {
+		display: none;
+		animation-name: zoomInUp;
+		animation-duration: 1s;
+		animation-fill-mode: both;
+		border-radius: 10px;
+	}
+
+	nav.visible,
+	#divsoudure.visible,
+	#divmeca.visible,
+	#divavion.visible {
+		display: block;
+		background-color: #f6f6f4;
+		margin: auto;
+		width: auto;
+		border-radius: 10px;
+		padding: 20px;
+
+
+	}
+
+	#html,
+	#js {
+		display: flex;
+		flex-direction: row;
+		gap: 2rem;
+		justify-content: center;
+		background-color: beige;
+		margin-right: 0px;
+
+	}
+
+	#css,
+	#siteweb {
+		display: flex;
+		flex-direction: row-reverse;
+		gap: 2rem;
+		justify-content: center;
+		background-color: aliceblue;
+	}
+
+	#html img,
+	#css img,
+	#js img,
+	#souduretig img {
+		width: 300px;
+		height: 300px;
+		box-shadow: -9px 19px 16px black;
+		transition: transform 0.3s ease-in-out;
+		border-radius: 10px;
+		margin-left: 0;
+
+	}
+
+	#siteweb img {
+		width: 174px;
+		height: 538px;
+		box-shadow: -9px 19px 16px black;
+		transition: transform 0.3s ease-in-out;
+		border-radius: 10px;
+		margin-left: 0;
+	}
+
+
+	#html img:hover,
+	#css img:hover,
+	#siteweb img:hover,
+	#js img:hover {
+		transform: scale(2.5);
+		justify-content: center;
+		cursor: pointer;
+
+	}
+
+	nav h5 {
+		text-align: center;
+		margin-bottom: 10px;
+		margin-top: 4rem;
+		font-size: 30px;
+	}
+
+	nav p {
+		text-align: center;
+		padding-top: 26px;
+		font-size: 30px;
+		font-family: ecriture-p;
+	}
+
+	#close-dev:hover,
+	#close-soudure:hover,
+	#close-meca:hover,
+	#close-avion:hover {
+		background-color: var(--color-doree);
+		border-radius: 40px;
+		cursor: pointer;
+		cursor: pointer;
+
+	}
+
+	/*******************************/
+	/* priorité de la partie soudure*/
+
+	#divsoudure {
+		display: none;
+		margin: 30px;
+		margin-bottom: 50px;
+		animation-duration: 1s;
+		animation-name: fadeInDownBig;
+	}
+
+	#souduretig {
+		display: flex;
+		flex-direction: row;
+		margin-top: 6rem;
+		gap: 25px;
+		align-items: center;
+		background-color: #5f9ea04d;
+
+	}
+
+
+	#souduretig img {
+		width: 550px;
+		height: 500px;
+		box-shadow: -9px 19px 16px black;
+		margin-bottom: 2rem;
+
+	}
+
+	#divsoudure h5,
+	#divmeca h5,
+	#divavion h5 {
+		text-align: center;
+		margin-bottom: 0px;
+		margin-top: 50px;
+		font-size: 30px;
+	}
+
+	#vente,
+	#agro,
+	#sport:nth-child(5n+1) {
+		animation-delay: 0s;
+	}
+
+	#vente,
+	#agro,
+	#sport:nth-child(5n+2) {
+		animation-delay: 0.2s;
+	}
+
+	#vente,
+	#agro,
+	#sport:nth-child(5n+3) {
+		animation-delay: 0.4s;
+	}
+
+	#vente,
+	#agro,
+	#sport:nth-child(5n+4) {
+		animation-delay: 0.6s;
+	}
+
+	#vente,
+	#agro,
+	#sport:nth-child(5n+5) {
+		animation-delay: 0.8s;
+	}
+
+	#divsoudure p,
+	#divmeca p,
+	#divavion p {
+		text-align: center;
+		cursor: pointer;
+		padding-top: 20px;
+		padding-bottom: 20px;
+		font-size: 23px;
+		font-family: ecriture-p;
+
+	}
+
+	/*********************************/
+	/*priorité de la partie mecanique*/
+
+	#divmeca {
+		display: none;
+		margin: 30px;
+		margin-bottom: 50px;
+		animation-name: flipInX;
+		backface-visibility: visible !important;
+		animation-duration: 1.5s;
+		animation-fill-mode: both;
+
+	}
+
+	/*******************************************/
+	/*priorité de la partie faisceaux electrique*/
+
+	#divavion {
+		display: none;
+		margin: 30px;
+		margin-bottom: 50px;
+		animation-name: flipInX;
+		backface-visibility: visible !important;
+		animation-duration: 1.5s;
+		animation-fill-mode: both;
+
+	}
+
+	/****FERMER******/
+
+	#close {
+		padding: 10px;
+		cursor: pointer;
+	}
+
+	.autretaf {
+		display: flex;
+		text-align: center;
+		flex-direction: column;
+		font-size: 25px;
+		border: groove 10px black;
+		padding-top: 5px;
+		padding-bottom: 10px;
+		font-family: ecriture-p;
+		border-radius: 10px;
+
+	}
+
+	.autretaf p {
+		color: white;
+	}
+
+	.cadretaf {
+		border: inset 5px var(--color-doree);
+		padding-bottom: 2rem;
+
+	}
+
+	#text {
+		color: white;
+	}
+
+	#vente,
+	#agro,
+	#sport {
+		cursor: pointer;
+		color: white;
+		font-family: ecriture-h;
+		font-size: 35px;
+	}
+
+	#vente:hover,
+	#agro:hover,
+	#sport:hover {
+
+		text-shadow: 10px 10px 10px black;
+		text-shadow: 0px 15px 4px black;
+		animation: none;
+
+	}
+
+	#infovente,
+	#infoagro,
+	#infosport {
+		display: none;
+		margin: 30px;
+		margin-bottom: 50px;
+	}
+
+	#infovente.visible,
+	#infoagro.visible,
+	#infosport.visible {
+		display: block;
+		animation-name: bounceInRight;
+		animation-duration: 2s;
+		animation-fill-mode: both;
+	}
+
+	#close-vente,
+	#close-agro,
+	#close-sport {
+		display: block;
+		position: relative;
+		z-index: 2;
+		justify-content: center;
+		padding: 3px;
+
+	}
+
+	#close-vente.hidden,
+	#close-agro.hidden,
+	#close-sport.hidden {
+		display: none;
+	}
+
+	#close-vente:hover,
+	#close-agro:hover,
+	#close-sport:hover {
+		background-color: var(--color-doree);
+		box-shadow: 0px 16px 11px black;
+		cursor: pointer;
+		padding: 10px;
+	}
+
+	br {
+		margin-top: 10px;
+		margin-bottom: 10px;
+	}
+
+	footer {
+		display: flex;
+		justify-content: center;
+		padding-top: 2rem;
+		padding-bottom: 2rem;
+		border: groove 10px black;
+		border-radius: 10px;
+		width: 68%;
+
+
+	}
+
+	footer h4 {
+		font-size: 25px;
+		text-align: center;
+		font-family: ecriture-h;
+		font-style: italic;
+		color: white;
+	}
+
+	/****propriété des colonne animé en hover de différentes couleurs dans autres tafs****/
+	.container .card:before {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: calc(-100% + 4px);
+		width: 100%;
+		height: 100%;
+		background: #000;
+		z-index: 1;
+		transition: 0.5s ease-in-out;
+	}
+
+	.container .card:nth-child(1):before {
+		background: #ff56ada8;
+		z-index: 1;
+	}
+
+	.container .card:nth-child(2):before {
+		background: #1bcaff9d;
+		z-index: 1;
+	}
+
+	.container .card:nth-child(3):before {
+		background: #e23cff91;
+		z-index: 1;
+	}
+
+	.container .card h2 {
+		font-size: 30px;
+	}
+
+	.container .card p {
+		font-size: 18px;
+
+	}
+
+	/**************************************************************/
+}
+
+
+@keyframes slideInRight {
+	0% {
+		-webkit-transform: translateX(100%);
+		transform: translateX(100%);
+		visibility: visible;
+	}
+
+	100% {
+		-webkit-transform: translateX(0);
+		transform: translateX(0);
+	}
+}
+
+@keyframes fadeInDownBig {
+	0% {
+		opacity: 0;
+		transform: translate3d(0, -2000px, 0);
+	}
+
+	100% {
+		opacity: 1;
+		transform: none;
+	}
+}
+
+@keyframes zoomInUp {
+	0% {
+		opacity: 0;
+		transform: scale3d(.1, .1, .1) translate3d(0, 1000px, 0);
+		animation-timing-function: cubic-bezier(0.550, 0.055, 0.675, 0.190);
+	}
+
+	60% {
+		opacity: 1;
+		transform: scale3d(.475, .475, .475) translate3d(0, -60px, 0);
+		animation-timing-function: cubic-bezier(0.175, 0.885, 0.320, 1);
+	}
+}
+
+@keyframes flipInX {
+	0% {
+		transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+		transition-timing-function: ease-in;
+		opacity: 0;
+	}
+
+	40% {
+		transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+		transition-timing-function: ease-in;
+	}
+
+	60% {
+		transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+		opacity: 1;
+	}
+
+	80% {
+		transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+	}
+
+	100% {
+		transform: perspective(400px);
+	}
+
+}
+
+@keyframes animate {
+
+	0%,
+	80% {
+		color: #333;
+		text-shadow: none;
+	}
+
+	100% {
+		color: #fff;
+		text-shadow: 0 0 10px #fff,
+			0 0 20px #fff,
+			0 0 40px #fff,
+			0 0 80px #fff,
+			0 0 120px #fff,
+			0 0 160px #fff;
+	}
+}
+
+@keyframes bounceInRight {
+
+
+	0% {
+		opacity: 0;
+		-webkit-transform: translate3d(3000px, 0, 0);
+		transform: translate3d(3000px, 0, 0);
+	}
+
+	60% {
+		opacity: 1;
+
+		transform: translate3d(-25px, 0, 0);
+	}
+
+	75% {
+
+		transform: translate3d(10px, 0, 0);
+	}
+
+	90% {
+
+		transform: translate3d(-5px, 0, 0);
+	}
+
+	100% {
+
+		transform: none;
+	}
+}
